@@ -1,9 +1,13 @@
-import { Navbar } from "./components";
+import { Navbar, Footer, Home } from "./components";
 
 const App = () => {
   return (
     <>
-      <Navbar />
+      <div className="d-flex flex-column justify-content-between vh-100">
+        <Navbar />
+        <Home />
+        <Footer />
+      </div>
     </>
   );
 };
