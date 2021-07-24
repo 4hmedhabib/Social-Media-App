@@ -4,7 +4,7 @@ const App = () => {
   return (
     <>
       <div className="d-flex flex-column justify-content-between vh-100">
-        <Navbar />
+        {/* <Navbar /> */}
         <Home />
         <Footer />
       </div>

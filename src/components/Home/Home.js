@@ -1,4 +1,5 @@
 import { Posts } from "../";
+
 const Home = () => {
   return (
     <>

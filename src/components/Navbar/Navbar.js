@@ -5,7 +5,7 @@ const Header = () => {
     <>
       <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
         <Container justify-content-center align-items-center>
-          <Navbar.Brand className="h" href="/">
+          <Navbar.Brand className="" href="/">
             Social Media
           </Navbar.Brand>
           <Navbar.Toggle area-controls="responsive-navbar-nav" />
