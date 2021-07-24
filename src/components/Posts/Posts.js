@@ -35,9 +35,6 @@ const Posts = () => {
 
     Axios.get("https://jsonplaceholder.typicode.com/posts/").then((res) => {
       setPosts(res.data);
-      posts.sort(function (a, b) {
-        return a.localeCompare(b);
-      });
     });
   }, []);
 
