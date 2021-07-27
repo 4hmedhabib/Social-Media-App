@@ -1,26 +1,23 @@
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import Post from "./Post/Post";
+import postsData from "../../data/posts";
+import usersData from "../../data/users";
 
 const Posts = () => {
-  const [user, setUser] = useState("");
+  const [users, setUsers] = useState("");
   const [posts, setPosts] = useState("");
 
   useEffect(() => {
-    Axios.get("https://jsonplaceholder.typicode.com/users/").then((res) => {
-      setUser(res.data);
-    });
-
-    Axios.get("https://jsonplaceholder.typicode.com/posts/").then((res) => {
-      setPosts(res.data);
-    });
+    setUsers(usersData);
+    setPosts(postsData);
   }, []);
 
   return (
     <>
       {posts &&
         posts.map((post, i) => {
-          const userId = user && user.filter((u) => u.id === post.userId);
+          const userId = users && users.filter((u) => u.id === post.userId);
           return <Post post={post} key={post.id} user={userId[0]} />;
         })}
     </>
