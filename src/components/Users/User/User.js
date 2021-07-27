@@ -8,19 +8,19 @@ const User = () => {
             <div class="job-card_img">
               <img
                 src="https://reqres.in/img/faces/9-image.jpg"
-                alt="Company Logo"
+                alt="username"
               />
             </div>
             <div class="job-card_info">
-              <h6 class="text-muted">
+              <span class="text-muted">
                 <a href="#!" class="job-card_company text-decoration-none">
                   username
                 </a>
-                <a href="#!" class="float-end">
-                  <i class="text-danger fa fa-heart-o"></i>
+                <a href="#!" class="float-end d-md-block d-none">
+                  <i class="text-danger fa fa-heart-o "></i>
                 </a>
-              </h6>
-              <h5 className="card-title">Name</h5>
+              </span>
+              <h6 className="card-title">Name is here</h6>
             </div>
           </div>
         </div>

@@ -1,13 +1,20 @@
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Navbar, Footer, Home } from "./components";
 
 const App = () => {
   return (
     <>
-      <div className="d-flex flex-column justify-content-between vh-100">
-        {/* <Navbar /> */}
-        <Home />
-        <Footer />
-      </div>
+      <Router>
+        <div className="d-flex flex-column justify-content-between vh-100">
+          <Navbar />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
     </>
   );
 };
