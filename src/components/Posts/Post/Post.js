@@ -3,54 +3,101 @@ import "./Post.css";
 const Post = ({ post, user }) => {
   return (
     <div>
-      <div className="post">
-        <div className="post-header">
-          <div className="post-profile">
-            <div className="profile-img">
+      <div className="">
+        <div className="card">
+          <div className="d-flex justify-content-between p-2 px-3">
+            <div className="d-flex flex-row align-items-center">
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+                src="https://i.imgur.com/UXdKE3o.jpg"
+                width="50"
+                className="rounded-circle"
                 alt=""
               />
+              <div className="d-flex flex-column ms-2">
+                {" "}
+                <span className="font-weight-bold">Jeanette Sun</span>{" "}
+                <small className="text-primary">Collegues</small>{" "}
+              </div>
             </div>
-            <a className="profile-name text-decoration-none text-dark">
-              {user && user.name}
-            </a>
-          </div>
-          <div className="post-header-right">
-            <button className="btn btn-sm border-0 btn-outline fw-bold d-flex justify-content-center align-items-center mb-3">
-              <span className="h1">...</span>
-            </button>
-          </div>
-        </div>
-        <div className="post-body">
-          <div className="post-desc">
-            <p className="mb-1">{post.title}</p>
-            <p className="lead mt-0">{post.body}</p>
-          </div>
-          <div className="post-img">
-            <img
-              className="img-fluid"
-              src="https://images.unsplash.com/photo-1521575107034-e0fa0b594529?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cG9zdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-              alt=""
-            />
-          </div>
-          <div className="post-comment">
-            <div className="post-view">
-              <label htmlFor="comment" className=" form-label">
-                Comments
-              </label>
-              <button className="btn btn-sm border-0 text-dark">View</button>
+            <div className="d-flex flex-row mt-1 ellipsis">
+              {" "}
+              <small className="mr-2">20 mins</small>{" "}
+              <i className="fa fa-ellipsis-h"></i>{" "}
             </div>
-            <form action="">
-              <input
-                type="text"
-                className="form-control"
-                name="comment"
-                id="comment"
-                placeholder="Coment..."
-              />
-              <button className="btn btn-primary">Send</button>
-            </form>
+          </div>{" "}
+          <img
+            src="https://i.imgur.com/xhzhaGA.jpg"
+            className="img-fluid"
+            alt=""
+          />
+          <div className="p-2">
+            <p className="text-justify">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <hr />
+            <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex flex-row icons d-flex align-items-center">
+                {" "}
+                <i className="fa fa-heart"></i>{" "}
+                <i className="fa fa-smile-o ms-2"></i>{" "}
+              </div>
+              <div className="d-flex flex-row muted-color">
+                {" "}
+                <span>2 comments</span> <span className="ms-2">Share</span>{" "}
+              </div>
+            </div>
+            <hr />
+            <div className="comments">
+              <div className="d-flex flex-row mb-2">
+                {" "}
+                <img
+                  src="https://i.imgur.com/9AZ2QX1.jpg"
+                  width="40"
+                  className="rounded-image"
+                  alt=""
+                />
+                <div className="d-flex flex-column ms-2">
+                  {" "}
+                  <span className="name">Daniel Frozer</span>{" "}
+                  <small className="comment-text">
+                    I like this alot! thanks alot
+                  </small>
+                  <div className="d-flex flex-row align-items-center status">
+                    {" "}
+                    <small>Like</small> <small>Reply</small>{" "}
+                    <small>Translate</small> <small>18 mins</small>{" "}
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex flex-row mb-2">
+                {" "}
+                <img
+                  src="https://i.imgur.com/1YrCKa1.jpg"
+                  width="40"
+                  className="rounded-image"
+                  alt=""
+                />
+                <div className="d-flex flex-column ms-2">
+                  {" "}
+                  <span className="name">Elizabeth goodmen</span>{" "}
+                  <small className="comment-text">Thanks for sharing!</small>
+                  <div className="d-flex flex-row align-items-center status">
+                    {" "}
+                    <small>Like</small> <small>Reply</small>{" "}
+                    <small>Translate</small> <small>8 mins</small>{" "}
+                  </div>
+                </div>
+              </div>
+              <div className="comment-input">
+                {" "}
+                <input type="text" className="form-control" />
+                <div className="fonts">
+                  {" "}
+                  <i className="fa fa-camera"></i>{" "}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
