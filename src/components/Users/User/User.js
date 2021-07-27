@@ -1,26 +1,34 @@
+import moment from "moment";
+import { Link } from "react-router-dom";
 import "./User.css";
-const User = () => {
+const User = ({ user }) => {
   return (
     <div>
-      <div class="card my-3">
+      <div className="card my-3">
         <div className="card-body">
-          <div class="job-card__content">
-            <div class="job-card_img">
+          <div className="job-card__content">
+            <div className="job-card_img">
               <img
-                src="https://reqres.in/img/faces/9-image.jpg"
+                src={"https://reqres.in/img/faces/" + user.id + "-image.jpg"}
                 alt="username"
               />
             </div>
-            <div class="job-card_info">
-              <span class="text-muted">
-                <a href="#!" class="job-card_company text-decoration-none">
-                  username
-                </a>
-                <a href="#!" class="float-end d-md-block d-none">
-                  <i class="text-danger fa fa-heart-o "></i>
-                </a>
+            <div className="job-card_info">
+              <span className="text-muted">
+                <Link
+                  to={"/" + user.username}
+                  className="job-card_company text-decoration-none"
+                >
+                  {user.username}
+                </Link>
+                <span className="float-end d-md-block d-none">
+                  <i className="text-danger fa fa-heart-o"></i>
+                </span>
               </span>
-              <h6 className="card-title">Name is here</h6>
+              <h6 className="card-title">{user.name}</h6>
+              <span className="text-muted">
+                Joined {moment(user.joinedAt).toNow()} ago
+              </span>
             </div>
           </div>
         </div>

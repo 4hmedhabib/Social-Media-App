@@ -1,17 +1,22 @@
 import { useEffect, useState } from "react";
-import Axios from "axios";
 import Post from "./Post/Post";
 import postsData from "../../data/posts";
 import usersData from "../../data/users";
+import moment from "moment";
 
 const Posts = () => {
   const [users, setUsers] = useState("");
   const [posts, setPosts] = useState("");
 
   useEffect(() => {
+    const reverseData = postsData.sort(function (a, b) {
+      return moment(b.createdAt) - moment(a.createdAt);
+    });
     setUsers(usersData);
     setPosts(postsData);
   }, []);
+
+  console.log(posts);
 
   return (
     <>

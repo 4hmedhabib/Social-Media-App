@@ -1,6 +1,15 @@
 import User from "./User/User";
+import usersData from "../../data/users";
+import { useState, useEffect } from "react";
 
 const Users = () => {
+  const [users, setUsers] = useState("");
+
+  useEffect(() => {
+    const reverseData = usersData.sort().reverse();
+    setUsers(reverseData);
+  }, []);
+
   return (
     <div>
       <div className="card bg-white  p-2">
@@ -10,7 +19,10 @@ const Users = () => {
           </h5>
         </div>
       </div>
-      <User />
+      {users &&
+        users.map((user) => {
+          return <User key={user.id} user={user} />;
+        })}
     </div>
   );
 };

@@ -21,6 +21,7 @@ const users = [
       catchPhrase: "Multi-layered client-server neural-net",
       bs: "harness real-time e-markets",
     },
+    joinedAt: "2015-07-15T08:55:57.661Z",
   },
   {
     id: 2,
@@ -44,6 +45,7 @@ const users = [
       catchPhrase: "Proactive didactic contingency",
       bs: "synergize scalable supply-chains",
     },
+    joinedAt: "2012-07-15T08:55:57.661Z",
   },
   {
     id: 3,
@@ -67,6 +69,7 @@ const users = [
       catchPhrase: "Face to face bifurcated interface",
       bs: "e-enable strategic applications",
     },
+    joinedAt: "2010-07-15T08:55:57.661Z",
   },
   {
     id: 4,
@@ -90,7 +93,9 @@ const users = [
       catchPhrase: "Multi-tiered zero tolerance productivity",
       bs: "transition cutting-edge web services",
     },
+    joinedAt: "2017-07-15T08:55:57.661Z",
   },
+
   {
     id: 5,
     name: "Chelsey Dietrich",
@@ -113,10 +118,11 @@ const users = [
       catchPhrase: "User-centric fault-tolerant solution",
       bs: "revolutionize end-to-end systems",
     },
+    joinedAt: "2019-07-15T08:55:57.661Z",
   },
   {
     id: 6,
-    name: "Mrs. Dennis Schulist",
+    name: "Dennis Schulist",
     username: "Leopoldo_Corkery",
     email: "Karley_Dach@jasper.info",
     address: {
@@ -136,6 +142,7 @@ const users = [
       catchPhrase: "Synchronised bottom-line interface",
       bs: "e-enable innovative applications",
     },
+    joinedAt: "2018-07-15T08:55:57.661Z",
   },
   {
     id: 7,
@@ -152,6 +159,7 @@ const users = [
         lng: "21.8984",
       },
     },
+
     phone: "210.067.6132",
     website: "elvis.io",
     company: {
@@ -159,6 +167,7 @@ const users = [
       catchPhrase: "Configurable multimedia task-force",
       bs: "generate enterprise e-tailers",
     },
+    joinedAt: "2012-07-15T08:55:57.661Z",
   },
   {
     id: 8,
@@ -182,6 +191,7 @@ const users = [
       catchPhrase: "Implemented secondary concept",
       bs: "e-enable extensible e-tailers",
     },
+    joinedAt: "2020-07-15T08:55:57.661Z",
   },
   {
     id: 9,
@@ -205,6 +215,7 @@ const users = [
       catchPhrase: "Switchable contextually-based project",
       bs: "aggregate real-time technologies",
     },
+    joinedAt: "2014-07-15T08:55:57.661Z",
   },
   {
     id: 10,
@@ -228,6 +239,7 @@ const users = [
       catchPhrase: "Centralized empowering task-force",
       bs: "target end-to-end models",
     },
+    joinedAt: "2011-07-15T08:55:57.661Z",
   },
 ];
 
