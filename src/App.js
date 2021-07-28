@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Navbar, Footer, Home, CreatePost } from "./components";
+import { Navbar, Footer, Home, CreatePost, PostDetails } from "./components";
 import posts from "./data/posts";
 import users from "./data/users";
 
@@ -16,7 +16,6 @@ const App = () => {
       const numId = Math.floor(Math.random() * 100);
 
       if (post.id !== numId) {
-        console.log("isma leeka", numId);
         genId.push(numId);
       }
       return numId;
@@ -24,13 +23,10 @@ const App = () => {
     users.filter((user) => {
       const numId = Math.floor(Math.random() * 10);
       if (user.id === numId) {
-        console.log("user is : ", numId);
         userId.push(numId);
       }
       return numId;
     });
-
-    console.log("your result :", userId, genId);
   });
 
   const handlerPost = (e) => {
@@ -53,6 +49,16 @@ const App = () => {
             </Route>
             <Route exact path="/create">
               <CreatePost handlerPost={handlerPost} create={createPost} />
+            </Route>
+            <Route path="/posts/:postId">
+              <PostDetails />
+            </Route>
+            <Route path="*">
+              <div className="container text-center">
+                <div className="row my-5">
+                  <h1>404 PAGE NOT FOUND</h1>
+                </div>
+              </div>
             </Route>
           </Switch>
           <Footer />

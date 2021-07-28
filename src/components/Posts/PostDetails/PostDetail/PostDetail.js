@@ -1,8 +1,8 @@
-import "./Post.css";
+import "./PostDetail";
 import Moment from "moment";
-import { Link } from "react-router-dom";
 
-const Post = ({ post, user }) => {
+const PostDetail = ({ post, user }) => {
+  console.log(user);
   return (
     <div>
       <div className="mb-3">
@@ -25,12 +25,9 @@ const Post = ({ post, user }) => {
               <small className="me-2">
                 {Moment(post.createdAt).toNow()} ago
               </small>{" "}
-              <Link
-                to={"/posts/" + post.id}
-                className="text-decoration-none text-dark"
-              >
+              <span className="text-decoration-none text-dark">
                 <i className="fa fa-ellipsis-h"></i>
-              </Link>{" "}
+              </span>{" "}
             </div>
           </div>{" "}
           <img src={post.img} className="img-fluid" alt="" />
@@ -106,4 +103,4 @@ const Post = ({ post, user }) => {
   );
 };
 
-export default Post;
+export default PostDetail;

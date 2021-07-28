@@ -4,3 +4,4 @@ export { default as Home } from "./Home/Home";
 export { default as Posts } from "./Posts/Posts";
 export { default as Users } from "./Users/Users";
 export { default as CreatePost } from "./Posts/CreatePost/CreatePost";
+export { default as PostDetails } from "./Posts/PostDetails/PostDetails";

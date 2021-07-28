@@ -6,13 +6,20 @@ const Header = () => {
     <>
       <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
         <Container>
-          <Navbar.Brand className="" href="/">
-            Social Media
+          <Navbar.Brand>
+            <Link to="/" className="text-decoration-none text-dark">
+              Social Media
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle area-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Link to="/create">Create Post</Link>
+              <Link
+                to="/create"
+                className="text-decoration-none lead btn btn-primary mt-3 mt-sm-0"
+              >
+                Create Post
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
