@@ -9,7 +9,6 @@ const App = () => {
   const [createPost, setCreatePost] = useState("");
 
   let genId = [];
-  let userId = [];
 
   useEffect(() => {
     posts.filter((post) => {
@@ -20,20 +19,16 @@ const App = () => {
       }
       return numId;
     });
-    users.filter((user) => {
-      const numId = Math.floor(Math.random() * 10);
-      if (user.id === numId) {
-        userId.push(numId);
-      }
-      return numId;
-    });
   });
+
+  const userId = Math.floor(Math.random() * 10) + 1;
+  console.log(userId);
 
   const handlerPost = (e) => {
     setCreatePost((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
-      userId: userId[0],
+      userId: userId,
       id: genId[0],
       title: "et ea vero quia laudantium autem",
     }));

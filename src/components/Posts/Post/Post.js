@@ -23,7 +23,8 @@ const Post = ({ post, user }) => {
             <div className="d-flex flex-row mt-1 ellipsis">
               {" "}
               <small className="me-2">
-                {Moment(post.createdAt).toNow()} ago
+                <span> Posted At </span>
+                {Moment(post.createdAt).format("DD/MM/YYYY HH:mm a")}
               </small>{" "}
               <Link
                 to={"/posts/" + post.id}
@@ -45,7 +46,13 @@ const Post = ({ post, user }) => {
               </div>
               <div className="d-flex flex-row muted-color">
                 {" "}
-                <span>2 comments</span> <span className="ms-2">Share</span>{" "}
+                <span>2 comments</span>{" "}
+                <Link
+                  to={"/posts/" + post.id}
+                  className="ms-2 text-decoration-none "
+                >
+                  View Post
+                </Link>{" "}
               </div>
             </div>
             <hr />

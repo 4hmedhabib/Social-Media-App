@@ -17,8 +17,11 @@ const CreatePost = ({ handlerPost, create }) => {
           <div className="">
             <div className=" col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-12">
               <div className="card">
-                <div className="card-body p-4">
+                <div className="card-header">
+                  {" "}
                   <h1 className="display-5 lead">Create Post</h1>
+                </div>
+                <div className="card-body p-4 pt-0">
                   <div className=" my-3">
                     <form onSubmit={submitPost}>
                       <TextField
